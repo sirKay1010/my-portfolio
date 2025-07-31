@@ -36,8 +36,8 @@ const AboutSection = () => (
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
         >
-          I'm Kayode — a developer with a passion for creating clean and modern
-          web apps. I build with technologies like Next.js, Blazor, and
+          I&#39;m Kayode — a developer with a passion for creating clean and
+          modern web apps. I build with technologies like Next.js, Blazor, and
           Firebase. I love solving real-world problems through code and
           continuously learning new tools and patterns.
         </motion.p>

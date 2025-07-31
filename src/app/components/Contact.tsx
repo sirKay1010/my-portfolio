@@ -36,8 +36,8 @@ const ContactSection = () => {
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Get in Touch</h2>
         <p className="text-gray-200 mb-6">
-          Have a question, collaboration idea, or opportunity you'd like to
-          discuss? I'd love to hear from you.
+          Have a question, collaboration idea, or opportunity you&#39;d like to
+          discuss? I&#39;d love to hear from you.
         </p>
 
         {/* Social Icons */}

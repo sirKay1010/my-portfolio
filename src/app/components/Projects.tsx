@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useCallback } from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -64,15 +64,18 @@ const ProjectsSection = () => {
     }
   };
 
-  const handleScroll = (direction: "left" | "right") => {
-    const nextIndex =
-      direction === "left"
-        ? (activeIndex - 1 + projects.length) % projects.length
-        : (activeIndex + 1) % projects.length;
+  const handleScroll = useCallback(
+    (direction: "left" | "right") => {
+      const nextIndex =
+        direction === "left"
+          ? (activeIndex - 1 + projects.length) % projects.length
+          : (activeIndex + 1) % projects.length;
 
-    setActiveIndex(nextIndex);
-    scrollToIndex(nextIndex);
-  };
+      setActiveIndex(nextIndex);
+      scrollToIndex(nextIndex);
+    },
+    [activeIndex]
+  );
 
   useEffect(() => {
     if (isHovered || !isProjectsInView) return;
@@ -82,7 +85,7 @@ const ProjectsSection = () => {
     }, 2500);
 
     return () => clearInterval(interval);
-  }, [activeIndex, isHovered, isProjectsInView]);
+  }, [activeIndex, isHovered, isProjectsInView, handleScroll]);
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index);
@@ -95,14 +98,11 @@ const ProjectsSection = () => {
       { threshold: 0.3 }
     );
 
-    if (projectsRef.current) {
-      observer.observe(projectsRef.current);
-    }
+    const currentRef = projectsRef.current;
+    if (currentRef) observer.observe(currentRef);
 
     return () => {
-      if (projectsRef.current) {
-        observer.unobserve(projectsRef.current);
-      }
+      if (currentRef) observer.unobserve(currentRef);
     };
   }, []);
 

@@ -2,7 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react"; // Requires lucide-react (run: npm install lucide-react)
+import { fileURLToPath } from "url";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -37,8 +39,15 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between bg-[#0f2027] items-center w-full px-6 py-4 fixed top-0 z-50">
       {/* Logo */}
-      <div className="text-xl font-bold text-white">
-        <Link href="/">Kayode</Link>
+      <div className="flex gap-6 justify-center items-center">
+        <div className="relative w-8 md:w-10 h-8 md:h-10">
+          <Image
+            src="/my-portfolio-icon.png"
+            alt="Kayode Kolawole Logo"
+            fill
+            className="rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-120"
+          />
+        </div>
       </div>
 
       {/* Desktop Menu */}

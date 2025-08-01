@@ -13,10 +13,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Developer Portfolio",
+  title: "Kayode Kolawole Portfolio",
+  description: "My Developer Portfolio",
   icons: {
-    // icon: "",
+    icon: "/my-portfolio-icon.png",
   },
 };
 

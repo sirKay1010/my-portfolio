@@ -37,6 +37,9 @@ const ContactSection = () => {
         alert("Oops! Something went wrong. Please try again later.");
       }
     } catch (error) {
+      if (process.env.NODE_ENV === "development") {
+        console.error("Form submission error:", error);
+      }
       alert("Something went wrong. Try again.");
     }
     setLoading(false);

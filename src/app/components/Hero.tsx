@@ -13,7 +13,7 @@ const Hero = () => {
         {/* Left: Text */}
         <div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Hi there, I'm Kayode Kolawole
+            Hi there, I&apos;m Kayode Kolawole
           </h1>
           <p className="text-lg md:text-xl mb-6">
             I am a developer passionate about building elegant, modern web

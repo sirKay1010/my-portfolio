@@ -41,12 +41,11 @@ const AboutSection = () => (
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
+          {/* Note: ALL the (') here are actually the ASCII equivalents, (Copied and pasted) because ESLint warns of possible issues with using the curly quotation that way... */}
           {`I'm a creative problem solver and self-taught developer from Nigeria.
-            I enjoy bringing ideas to life, whether it’s a slick UI, a fun new project, or trying out a new tech tool.
-            When I’m not writing code, I’m probably behind a camera lens.
-            I love capturing moments through photography and videography. Feel free to `}
-
-          {/* Instagram Link */}
+          I enjoy bringing ideas to life, whether it's a slick UI, a fun new project, or trying out a new tech tool.
+          When I'm not writing code, I'm probably behind a camera lens.
+          I love capturing moments through photography and videography. Feel free to `}
           <Link
             href="https://www.instagram.com/sir.kayy__"
             target="_blank"
@@ -55,8 +54,7 @@ const AboutSection = () => (
           >
             view my creative work on Instagram → 📸
           </Link>
-
-          {`\nI learn best by building and I live for those "It actually works!” moments.`}
+          {`\nI learn best by building and I live for those "It actually works!" moments.`}
         </motion.p>
 
         <motion.div

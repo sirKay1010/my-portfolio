@@ -142,7 +142,7 @@ const ContactSection = () => {
             <input
               type="text"
               name="name"
-              placeholder="Your Name"
+              placeholder="e.g. Mark"
               value={formValues.name}
               onChange={handleInputChange}
               className={`w-full p-3 rounded-lg bg-white/10 placeholder-white focus:outline-none focus:ring-2 ${
@@ -155,7 +155,7 @@ const ContactSection = () => {
             <input
               type="email"
               name="email"
-              placeholder="Your Email"
+              placeholder="mark@example.com"
               value={formValues.email}
               onChange={handleInputChange}
               className={`w-full p-3 rounded-lg bg-white/10 placeholder-white focus:outline-none focus:ring-2 ${
@@ -167,7 +167,7 @@ const ContactSection = () => {
             )}
             <textarea
               name="message"
-              placeholder="Your Message"
+              placeholder="Message..."
               rows={5}
               value={formValues.message}
               onChange={handleInputChange}

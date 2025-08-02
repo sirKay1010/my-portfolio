@@ -118,7 +118,7 @@ const ProjectsSection = () => {
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
       >
-        My Projects
+        Featured Projects
       </motion.h2>
 
       {/* Arrows */}

@@ -1,88 +1,109 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Link from "next/link";
 
 const techStack = [
   "Next.js",
-  "TypeScript",
-  "Tailwind CSS",
-  "Firebase",
   "Blazor",
   "C#",
+  "Firebase",
+  "TypeScript",
+  "JavaScript",
+  "Node.js",
+  "Tailwind CSS",
+  "Framer Motion",
+  "Git",
+  "Figma",
 ];
 
 const AboutSection = () => (
   <section
     id="about"
-    className="h-screen w-full flex items-center justify-center text-white px-6"
+    className="min-h-screen w-full flex items-center justify-center text-white px-6 py-20"
   >
-    <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-8">
-      {/* Text Content */}
+    <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      {/* About Me Section - Right */}
       <div>
         <motion.h2
-          className="text-3xl md:text-4xl font-semibold mb-4"
+          className="text-3xl md:text-4xl font-semibold mb-4 [font-family:var(--font-heading)]"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          About Me
+          A little about Me
         </motion.h2>
 
         <motion.p
-          className="text-lg leading-relaxed mb-4"
+          className="text-lg leading-relaxed whitespace-pre-line mb-6 [font-family:var(--font-body)]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          I&#39;m Kayode — a developer with a passion for creating clean and
-          modern web apps. I build with technologies like Next.js, Blazor, and
-          Firebase. I love solving real-world problems through code and
-          continuously learning new tools and patterns.
+          {`I'm a creative problem solver and self-taught developer from Nigeria.
+            I enjoy bringing ideas to life, whether it’s a slick UI, a fun new project, or trying out a new tech tool.
+            When I’m not writing code, I’m probably behind a camera lens.
+            I love capturing moments through photography and videography. Feel free to `}
+
+          {/* Instagram Link */}
+          <Link
+            href="https://www.instagram.com/sir.kayy__"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block text-purple-300 underline hover:text-purple-400 transition"
+          >
+            view my creative work on Instagram → 📸
+          </Link>
+
+          {`\nI learn best by building and I live for those "It actually works!” moments.`}
         </motion.p>
 
-        {/* Tech Stack Tags */}
         <motion.div
-          className="flex flex-wrap gap-2"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <Link
+            href="#contact"
+            className="inline-block px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white font-medium rounded-xl shadow transition"
+          >
+            Contact Me
+          </Link>
+        </motion.div>
+      </div>
+      {/* Tech Stack Section - Right */}
+      <div>
+        <motion.h3
+          className="text-xl font-medium mb-4"
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Technologies I’ve worked with
+        </motion.h3>
+
+        <motion.div
+          className="flex flex-wrap gap-3"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
           {techStack.map((tech) => (
-            <span
+            <motion.span
               key={tech}
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
               className="px-3 py-1 text-sm rounded-full bg-white/10 border border-white/20"
             >
               {tech}
-            </span>
+            </motion.span>
           ))}
         </motion.div>
       </div>
-
-      <motion.div
-        className="relative flex justify-center md:justify-end"
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
-        viewport={{ once: true }}
-      >
-        {/* Background blob */}
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:translate-x-0 md:right-0 
-          w-72 h-72 md:w-80 md:h-80 -z-10 rounded-full bg-purple-400/30 blur-3xl animate-pulse"
-        />
-
-        {/* Profile image */}
-        <Image
-          src="/profile-icon2.jpg"
-          alt="Kayode"
-          width={250}
-          height={250}
-          className="rounded-full object-cover shadow-lg border-2 border-white/20"
-        />
-      </motion.div>
     </div>
   </section>
 );

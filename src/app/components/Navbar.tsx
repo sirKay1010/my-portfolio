@@ -87,7 +87,7 @@ const Navbar = () => {
                 <h1 className="text-lg font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
                   Kayode
                 </h1>
-                <p className="text-xs text-gray-400 -mt-1">Developer</p>
+                <p className="text-xs text-gray-400 -mt-1">Software Engineer</p>
               </div>
             </motion.div>
 

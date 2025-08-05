@@ -114,7 +114,7 @@ const Hero = () => {
           >
             A{" "}
             <span className="text-blue-400 font-semibold">
-              software developer
+              software engineer
             </span>{" "}
             who blends creativity with code to build modern meaningful
             applications.

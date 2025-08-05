@@ -7,6 +7,7 @@ import { Camera, Code2, Brain, ExternalLink } from "lucide-react";
 const techStack = [
   "Next.js",
   "C#",
+  "Django",
   "Blazor",
   "Firebase",
   "TypeScript",
@@ -130,7 +131,7 @@ const AboutSection = () => {
                 <p className="text-gray-300 leading-relaxed">
                   When I&apos;m not writing code, I&apos;m probably behind a
                   camera lens. I love capturing moments through photography and
-                  videography.
+                  videography!
                 </p>
                 <Link
                   href="https://www.instagram.com/sir.kayy__"

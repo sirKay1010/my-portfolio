@@ -114,7 +114,7 @@ const Hero = () => {
           >
             A{" "}
             <span className="text-blue-400 font-semibold">
-              full-stack developer
+              software developer
             </span>{" "}
             who blends creativity with code to build modern meaningful
             applications.
@@ -196,7 +196,7 @@ const Hero = () => {
                 ease: "easeInOut",
               }}
             >
-              React
+              Developer
             </motion.div>
 
             <motion.div
@@ -212,13 +212,13 @@ const Hero = () => {
                 delay: 2,
               }}
             >
-              Next.js
+              Creative
             </motion.div>
 
             <motion.div
-              className="absolute top-1/2 -left-8 transform -translate-y-1/2 px-3 py-2 bg-cyan-500/90 backdrop-blur-sm rounded-lg text-sm font-medium shadow-lg"
+              className="absolute top-1/2 -left-12 transform -translate-y-1/2 px-3 py-2 bg-cyan-500/90 backdrop-blur-sm rounded-lg text-sm font-medium shadow-lg"
               animate={{
-                x: [-3, 3, -3],
+                x: [-6, 6, -6],
                 rotate: [-1, 1, -1],
               }}
               transition={{
@@ -228,7 +228,7 @@ const Hero = () => {
                 delay: 1,
               }}
             >
-              TypeScript
+              Engineer
             </motion.div>
           </motion.div>
         </div>

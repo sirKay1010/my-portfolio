@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${sora.variable} ${inter.variable}`}>
       <body
         className={
-          "bg-[url('/patterns/topography.svg')] bg-repeat bg-fixed antialiased"
+          "bg-[url('/patterns/topography.svg')] bg-repeat bg-fixed antialiased bg-[--color-background] text-[--color-foreground]"
         }
       >
         {children}

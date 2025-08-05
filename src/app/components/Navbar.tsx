@@ -66,7 +66,7 @@ const Navbar = () => {
             : "bg-gradient-to-b from-black/50 to-transparent bg-[#0f2027]/80 backdrop-blur-sm"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 py-4">
+        <div className="max-w-full mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             {/* Logo Section */}
             <motion.div
